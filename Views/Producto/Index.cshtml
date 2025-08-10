@@ -1,0 +1,22 @@
+@model List<tarea3.Models.ProductoMascota>
+    <h2>Lista de Productos para Mascotas</h2>
+    <table class="table table-borderred table-striped">
+        <thead class="table-dark">
+        <tr>
+            <th>Producto</th>
+            <th>Categorias</th>
+            <th>Precio</th>
+            <th>Descripcion</th>
+        </tr>
+        </thead>
+        <tbody>
+            @foreach (var producto in Model){
+                <tr>
+                <td>@producto.Nombre</td>
+                <td>@producto.Categoria</td>
+                <td>S/. @producto.Precio</td>
+                <td>@producto.Descripcion</td>
+            </tr>
+            }
+        </tbody>
+    </table>
